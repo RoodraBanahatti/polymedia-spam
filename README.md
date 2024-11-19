@@ -1,4 +1,4 @@
-# SPAM
+# SPAM2.0
 
 "Spam to Earn" a.k.a. "Proof of Spam" on Sui.
 
@@ -6,13 +6,21 @@
 
 ## ELI5
 
-One billion SPAM coins are minted every day.
+The initial rewards SPAM coins is 1 M.
+
+The Rewards will decrease by 10% with each epoch.
 
 Users earn SPAM simply by sending Sui transactions.
 
 The more txs you send, the more SPAM you receive.
 
+The more invite people send, the more SPAM you receive.
+
+The initial tx shares is 10, referral add shares 2. The inviter gains shares 3
+
 There is no proof of work, only proof of spam.
+
+Sending txs on SUI,There is a chance the account may be locked until the next epoch.
 
 ## System overview
 
