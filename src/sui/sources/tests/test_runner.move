@@ -42,7 +42,7 @@ module spam::test_runner {
     public fun new_user_counter(
         self: &mut TestRunner,
     ) {
-        spam::new_user_counter_for_testing(&self.director, self.scenario.ctx());
+        spam::new_user_counter_for_testing(&self.director,ADMIN, self.scenario.ctx());
     }
 
     public fun increment_user_counter(
@@ -50,10 +50,9 @@ module spam::test_runner {
         count: u64,
     ) {
         let mut index = 0;
-
-        let sender = self.scenario.sender();
+        let  user_counter = &mut self.take_from_sender<UserCounter>();
         while (count > index) {
-            let user_counter = self.take_from_sender<UserCounter>();
+            let sender = self.scenario.sender();
             spam::increment_user_counter_for_testing(user_counter, self.scenario.ctx());
             self.next_tx_with_sender(sender);
             index = index + 1;
