@@ -9,7 +9,7 @@ module spam::spam_tests {
 
     const ALICE: address = @0xa11ce;
     const ADMIN: address = @0x12;
-    const TOTAL_EPOCH_REWARD: u64 = 10_000_000_000_000; // 1 billion (4 decimals)
+    const TOTAL_EPOCH_REWARD: u64 = 10_000_000_000; // 1 m (4 decimals)
 
     use fun test_runner::assert_value as coin::Coin.assert_value;
 
